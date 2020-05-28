@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonTrue;
     private Button buttonFalse;
     private ImageButton buttonNext;
+    private ImageButton buttonPrev;
     private TextView textQuestion;
     private int currentQuestionIndex = 0;
     private Question[] questionBank = new Question[] {
@@ -37,11 +38,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonTrue = findViewById(R.id.buttonTrue);
         buttonFalse = findViewById(R.id.buttonFalse);
         buttonNext = findViewById(R.id.buttonNext);
+        buttonPrev = findViewById(R.id.buttonPrevious);
         textQuestion = findViewById(R.id.answer_test_view);
 
         buttonFalse.setOnClickListener(this); //register our buttons to listen to click event
         buttonTrue.setOnClickListener(this);
         buttonNext.setOnClickListener(this);
+        buttonPrev.setOnClickListener(this);
     }
 
     @Override
@@ -56,11 +59,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                Toast.makeText(MainActivity.this, "True", Toast.LENGTH_SHORT).show();
                 checkAnswer(true);
                 break;
+
             case R.id.buttonNext:
 //                Log.d("Current","Button ok");
                 // go to next question
                 currentQuestionIndex = (currentQuestionIndex + 1) % questionBank.length; // index restart after hitting length of questionBank array to avoid index out of bounds/
                 updateQuestion();
+                break;
+
+            case R.id.buttonPrevious:
+                if (currentQuestionIndex > 0) {
+                currentQuestionIndex = (currentQuestionIndex - 1) % questionBank.length;
+                updateQuestion();
+                }
                 break;
 
             default:

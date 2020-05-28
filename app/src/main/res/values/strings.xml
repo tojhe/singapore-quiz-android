@@ -13,4 +13,5 @@
 
     <string name="text_answer_correct">That\'s correct</string>
     <string name="text_answer_wrong">That\'s wrong</string>
+    <string name="button_previous">Previous</string>
 </resources>
