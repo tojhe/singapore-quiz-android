@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SingaporeQuiz</string>
+    <string name="text_question">Welcome the Singaporean to Singapore</string>
+
+    <string name="button_true">True</string>
+    <string name="button_false">False</string>
+    <string name="button_next">Next</string>
+
+    <string name="text_question_independence">Singapore gained independence in 1968</string>
+    <string name="text_question_region">Singapore is located in South East Asia</string>
+    <string name="text_question_language">Bahasa Melayu is the national language of Singapore</string>
+    <string name="text_question_society">The last racial riot in Singapore occurred in June 2003</string>
+
+    <string name="text_answer_correct">That\'s correct</string>
+    <string name="text_answer_wrong">That\'s wrong</string>
+</resources>
